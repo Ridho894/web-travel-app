@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import ReactMapGL, { Marker, Popup } from 'react-map-gl'
-import { Room } from '@material-ui/icons'
+import { Room, Star } from '@material-ui/icons'
 
 function App() {
   const [viewport, setViewPort] = useState({
@@ -30,7 +30,29 @@ function App() {
           anchor="left"
         >
           <div>
-            <label>Here</label>
+            <div>
+              <label className={"text-red-800 border-b-2 border-red-800"}>Place</label>
+              <h4>Eiffel Tower</h4>
+            </div>
+            <div>
+              <label className={"text-red-800 border-b-2 border-red-800"}>Review</label>
+              <p>Beautiful Place, I like it.</p>
+            </div>
+            <div>
+              <label className={"text-red-800 border-b-2 border-red-800"}>Rating</label>
+              <div>
+                <Star style={{ color: 'gold' }} />
+                <Star style={{ color: 'gold' }} />
+                <Star style={{ color: 'gold' }} />
+                <Star style={{ color: 'gold' }} />
+                <Star style={{ color: 'gold' }} />
+              </div>
+            </div>
+            <label className={"text-red-800 border-b-2 border-red-800"}>Information</label>
+            <div className={"flex flex-col"}>
+              <span>Created by: <b>Muhamad Ridho</b></span>
+              <span>1 Hour ago</span>
+            </div>
           </div>
         </Popup>
       </ReactMapGL>
